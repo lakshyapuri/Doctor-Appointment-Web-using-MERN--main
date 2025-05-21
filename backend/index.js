@@ -30,13 +30,11 @@ app.use(cookieParser());
 
 // Connect to MongoDB
 connectDB();
-
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/doctor", doctorRoutes);
 app.use("/api/reviews", reviewRoutes);
-
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
